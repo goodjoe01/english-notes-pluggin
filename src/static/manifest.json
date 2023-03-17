@@ -1,0 +1,35 @@
+{
+  "name": "English Vocabulary",
+  "version": "0.1.0",
+  "description": "Save a list of words",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": ["*://*/*"],
+  "action": {
+    "default_title": "Youtube Bookmarks",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png" 
+  },
+  "web_accessible_resources":[
+    {
+      "resources": [
+        "bookmark-icon.png"
+      ],
+      "matches": ["*://*/*"]
+    }
+  ],
+  "options_page": "options.html",
+  "manifest_version": 3
+}

@@ -1,0 +1,16 @@
+
+npm init -y
+crear manifest.json
+npm i react react-dom --save @types/react @types/react-dom @types/chrome
+npm i webpack webpack-cli --dev
+npm i -g typescript
+npm i ts-loader
+crear webpack.config.js, tsconfig.json
+npm install --save-dev html-webpack-plugin
+npm install copy-webpack-plugin --save-dev
+
+Agregar el siguiente script:
+"watch": "webpack --watch --progress --config webpack.config.js"
+
+Para leer css:
+npm i style-loader css-loader
